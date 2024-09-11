@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classificador de Prioridade de Requisitos</title>
+    <link rel="stylesheet" href="Styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Classificador de Prioridade de Requisitos</h1>
+        
+        <form id="requisitoForm">
+            <label for="descricaoRequisito">Nome do Requisito:</label>
+            <input type="text" id="descricaoRequisito" name="descricaoRequisito" required>
+
+            <label for="impactoUsuario">Impacto no Usuário :</label>
+            <select id="impactoUsuario" name="impactoUsuario">
+                <option value="alto">Alto</option>
+                <option value="médio">Médio</option>
+                <option value="baixo">Baixo</option>
+            </select>
+
+            <label for="viabilidadeTecnica">Viabilidade Técnica:</label>
+            <select id="viabilidadeTecnica" name="viabilidadeTecnica">
+                <option value="alto">Alto</option>
+                <option value="médio">Médio</option>
+                <option value="baixo">Baixo</option>
+            </select>
+
+            <button type="button" onclick="adicionarRequisito()">Adicionar Requisito</button>
+        </form>
+
+        <div id="listaRequisitos">
+            <h2>Lista de Requisitos</h2>
+            <ul id="requisitosLista"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
